@@ -1,6 +1,6 @@
 import firebase from 'firebase/app' 
-import 'firebase/auth' 
-import 'firebase/filestorage' 
+import 'firebase/auth'
+import 'firebase/firestore'
 import 'firebase/storage' 
 
 const firebaseConfig = {
@@ -18,5 +18,7 @@ if (!firebase.apps.length) {
 }
 
 export const auth = firebase.auth() 
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+
 export const firestore = firebase.firestore() 
-export const storage = firebase.storage() 
+export const storage = firebase.storage()  

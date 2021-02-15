@@ -1,5 +1,8 @@
 import Link from 'next/link'
 
+import Loader from '../components/Loader'
+import toast from 'react-hot-toast';
+
 export default function Home({ }) {
   return (
     <main>
@@ -9,9 +12,14 @@ export default function Home({ }) {
           pathname: '/[username]',
           query: { username: 'gabryx' }
         }}> 
-          <a>Gabryx's Profile</a>
-        </Link>
+          <a>Gabryx's Profile</a> 
+        </Link> 
       </div> 
-    </main>
+      <div> 
+        <button onClick={() => { toast.success('hello toast!') }}>
+          Toast Me  
+        </button> 
+      </div>
+    </main> 
   ) 
 } 
